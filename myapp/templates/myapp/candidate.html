@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css'%}">
+    <title>Document</title>
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cotainer">
+        <div class="alert-danger alert-cenetr">
+            <h1>Candidate Detailsh1</h1>
+            <div class="row">
+                <div class="col-sm-10">
+                    <h3 class="text-center"><u>Resume</u></h3>
+                    <!-- {{candidate.id}} -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <table style="width: 100%;">
+        <tr>
+            <th>Name</th>
+            <th>Date of BIrth</th>
+            <th>Gender</th>
+            <th>Locaity</th>
+            <th>City</th>
+            <th>Pin</th>
+            <th>State</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Job_city</th>
+            <th>My File</th>
+        </tr>
+
+        <tr>
+            <td> {{candidate.name}} </td>
+            <td>{{candidate.dob}}</td>
+            <td>{{candidate.gender}}</td>
+            <td>{{candidate.locality}}</td>
+            <td>{{candidate.city}}</td>
+            <td>{{candidate.pin}}</td>
+            <td>{{candidate.state}}</td>
+            <td>{{candidate.mobile}}</td>
+            <td>{{candidate.email}}</td>
+            <td>{{candidate.job_city}}</td>
+            <td>{{candidate.my_file}}</td>
+        </tr>
+    </table>
+    <script src="{% static 'myapp/js/bootstrap.js'%}"></script>
+    <script src="{% static 'myapp/js/jquery.js'%}"></script>
+    <script src="{% static 'myapp/js/popper.js'%}"></script>
+</body>
+
+</html>
